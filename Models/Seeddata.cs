@@ -15,10 +15,10 @@ public static class SeedData
                 DbContextOptions<DemoAppContext>>()))
         {
             // Look for any movies.
-            if (context.Movie.Any())
-            {
-                return;   // DB has been seeded
-            }
+            //if (context.Movie.Any())
+            //{
+            //    return;   // DB has been seeded
+            //}
             context.Movie.AddRange(
                 new Movie
                 {
@@ -49,7 +49,7 @@ public static class SeedData
                     Price = 3.99M
                 }
             );
-            context.SaveChanges();
+            //context.SaveChanges();
         }
     }
 }
